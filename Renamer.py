@@ -4,8 +4,8 @@ import re
 
 movie_suffix = {'mp4', 'mkv'}
 caption_suffix = {'ass'}
-movie_suffix_current = 'unselected'
-caption_suffix_current = 'unselected'
+movie_suffix_current = '未知'
+caption_suffix_current = '未知'
 movie_dict = {}
 caption_dict = {}
 pattern = re.compile(r'\d+')  # 匹配 [1] [23] [456]
@@ -35,8 +35,8 @@ for f in files:
         caption_dict[series_number.group()] = f
         caption_suffix_current = suffix
 
-print('读取到 ' + str(len(movie_dict)) + ' 个 ' + movie_suffix_current + ' 文件')
-print('读取到 ' + str(len(caption_dict)) + ' 个 ' + caption_suffix_current + ' 文件')
+print('读取到 ' + str(len(movie_dict)) + ' 个 ' + movie_suffix_current + ' 视频文件')
+print('读取到 ' + str(len(caption_dict)) + ' 个 ' + caption_suffix_current + ' 字幕文件')
 
 anime_name = input('请输入目标名称:\n')
 
